@@ -48,3 +48,26 @@ function computeFactorial(){
 
                  console.log("The factorial of "+ num + " is " + fact);
             }
+            backToMenu();
+        });
+}
+
+function backToMenu(){
+    console.log("--------");
+    console.log("1. Back to menu");
+    console.log("2. Exit");
+
+    rl.question("What would you like to do next? (1-2) :", (backToMenuChoice) =>{
+        if(backToMenuChoice ==="1"){
+            console.clear();
+            mainMenu();
+        } else if (backToMenuChoice === "2"){
+            console.log("Exiting program...Goodbye");
+            rl.close();
+        } else {
+            console.log("Invalid Choice. Please Try Again");
+            backToMenu();
+        }
+    })
+}
+mainMenu();
