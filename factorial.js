@@ -5,7 +5,7 @@ const rl = readline.createInterface({
     output:process.stdout
 
 });
-
+function mainMenu(){
 console.log("Factorial Application");
 
 console.log("1. Say Hello");
