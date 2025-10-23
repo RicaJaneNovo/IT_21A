@@ -34,12 +34,14 @@
         y: {
           beginAtZero: true
 
-class LineChart {
+class LineChart{
     constructor(canvasId,dataUrl){
         this.canvasId = canvasId;
         this.dataUrl = dataUrl;
         this.chart = null;
     }
+}
+        }
 
     renderChart(data){
         const ctx = document.getElementById(this.canvasId).getContext("2d");
@@ -83,7 +85,7 @@ class LineChart {
     }
 });
 
-    async init() {
+    async init(){
         const data = await this.fetchData();
         if(data){
             this.renderChart(data);
